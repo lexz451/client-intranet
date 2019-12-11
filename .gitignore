@@ -5,6 +5,7 @@ node_modules
 /.cache
 /.build
 /.dist
+/public
 
 # Local .env files
 .env.local
