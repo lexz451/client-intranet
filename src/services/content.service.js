@@ -8,21 +8,13 @@ class ContentService extends BaseService {
 	}
 
 	getProducts() {
-		//return this.get('products');
-		return new Promise((resolve, reject) => {
-			setTimeout(() => {
-				resolve(fakeProducts);
-			}, 5000);
-		});
+		return this.get('products');
+		
 	}
 
 	getInfo() {
-		//return this.get('documents');
-		return new Promise((resolve, reject) => {
-			setTimeout(() => {
-				resolve(fakeInfo);
-			}, 5000);
-		});
+		return this.get('documents');
+		
 	}
 }
 
