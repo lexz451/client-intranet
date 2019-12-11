@@ -2,16 +2,16 @@
 	<div class="info-item shadow shadow-1">
 		<div class="row">
 			<div class="col">
-				<!--<img v-lazy="item.image" class="img" alt="">-->
-				<img src="~/assets/images/hero.jpg" class="img" alt="">
+				<img v-lazy="item.image" class="img" alt="">
+				
 			</div>
-			<div class="col">
-				<div class="row">
+			<div class="col d-flex flex-column p-2">
+				<div class="row flex-grow-1">
 					<span class="title">{{ item.title }}</span>
-					<br>
-					<small>Last update: </small>
 				</div>
-				<div class="row"></div>
+				<div class="row">
+					<button class="btn btn-primary btn-sm">Download</button>
+				</div>
 			</div>
 		</div>
 	</div>
