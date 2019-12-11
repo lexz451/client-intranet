@@ -3,7 +3,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title">Modal title</h5>
+					<h5 class="modal-title">{{ title }}</h5>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close" @click="close">
 					<span aria-hidden="true">&times;</span>
 					</button>
@@ -30,11 +30,13 @@ export default {
 	data() {
 		return {
 			isOpen: false,
+			title: '',
 			src: ''
 		}
 	},
 	methods: {
-		show(src) {
+		show(title, src) {
+			this.title = title;
 			this.src = src;
 			this.isOpen = true;
 		},
@@ -62,7 +64,8 @@ export default {
 	justify-content: center;
 	align-items: center;
 	.wrapper {
-		width: 300px;
+		width: 90vw;
+		height: 90vh;
 		margin: 0px auto;
 		padding: 20px 30px;
 		background-color: #fafafa;

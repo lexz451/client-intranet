@@ -4,7 +4,7 @@
 			<i class="mr-2 ml-2" :class="icon"></i>
             <span class="title flex-grow-1">{{ item.title }}</span>
             <div class="d-flex" v-if="item.file">
-                <b-button icon="fa fa-file" size="sm" type="" @click.native="showModal(item.file)">View</b-button>
+                <b-button icon="fa fa-file" size="sm" type="" @click.native="showModal(item)">View</b-button>
                 <b-button class="ml-2" icon="fa fa-download" type="" size="sm" @click.native="showModal">Download</b-button>
             </div>
         </div>
@@ -45,8 +45,8 @@ export default {
                 this.isOpen = !this.isOpen;
             }
         },
-        showModal(src) {
-            this.$modal.show(src);
+        showModal(item) {
+            this.$modal.show(item.title, item.file);
         }
     },
     updated() {
