@@ -63,15 +63,12 @@ export default {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	.wrapper {
-		width: 90vw;
+	.modal-dialog {
+		max-width: 90vw;
 		height: 90vh;
-		margin: 0px auto;
-		padding: 20px 30px;
-		background-color: #fafafa;
-		border-radius: 2px;
-		box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
-		transition: all .3s ease;
+		.modal-content {
+			width: 90vw;
+		}
 		iframe {
 			width: 100%;
 		}
