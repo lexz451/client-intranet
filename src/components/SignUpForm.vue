@@ -5,8 +5,16 @@
 		</template>
 		<form-input v-model="credentials.name" placeholder="Full Name" addonLeftIcon="fa fa-user"></form-input>
 		<form-input v-model="credentials.enterprise" placeholder="Enterprice" addonLeftIcon="fa fa-user"></form-input>
-		<div class="select form-group w-100">
-			<b-select placeholder="Select your company type" v-model="credentials.companyType" :options="selectOptions"></b-select>
+		<div class="select form-group input-group w-100">
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+          			<i class="fa fa-user"></i>
+        		</span>
+			</div>
+			<select class="form-control" v-model="credentials.travelAgency">
+				<option value="travel_agency" selected>Travel Agency</option>
+				<option value="tour_operator">Tour Operator</option>
+			</select>
 		</div>
 		<form-input v-model="credentials.web" placeholder="Company Website" addonLeftIcon="fa fa-link"></form-input>
 		<form-input v-model="credentials.country" placeholder="Country" addonLeftIcon="fa fa-globe"></form-input>
@@ -28,24 +36,14 @@ export default {
 			credentials: {
 				name: '',
 				enterprise: '',
-				travelAgency: undefined,
+				travelAgency: "travel_agency",
 				web: '',
 				country: '',
 				email: '',
 				password: '',
 				passwordRepeat: '',
 				_token: undefined
-			},
-			selectOptions: [
-				{
-					title: 'Travel Agency',
-					value: 'travel_agency'
-				},
-				{
-					title: 'Tour Operator',
-					value: 'tour_operator'
-				}
-			]
+			}
 		}
 	},
 	methods: {

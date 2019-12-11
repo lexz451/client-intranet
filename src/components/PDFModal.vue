@@ -11,9 +11,6 @@
 				<div class="modal-body">
 					<iframe :src="src"></iframe>
 				</div>
-				<div class="modal-footer">
-					<button type="button" @click="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				</div>
 			</div>
 		</div>
 	</div>

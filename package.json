@@ -21,8 +21,8 @@
     "vue-template-compiler": "^2.6.10"
   },
   "scripts": {
-    "serve": "parcel ./src/index.html --out-dir ../public",
-    "build": "parcel build ./src/index.html --out-dir ./.dist --public-url ./ --no-source-maps",
+    "serve": "parcel ./src/index.html --out-dir ../public --public-url ./sensesofcuba/",
+    "build": "NODE_ENV=development parcel build ./src/index.html --out-dir ./.dist --public-url ./sensesofcuba/ --no-source-maps",
     "lint": "eslint --fix ./src"
   },
   "dependencies": {
