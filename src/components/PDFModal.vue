@@ -12,8 +12,7 @@
 					<iframe :src="src"></iframe>
 				</div>
 				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Save changes</button>
+					<button type="button" @click="close" class="btn btn-secondary" data-dismiss="modal">Close</button>
 				</div>
 			</div>
 		</div>
@@ -68,6 +67,7 @@ export default {
 		height: 90vh;
 		.modal-content {
 			width: 90vw;
+			height: 90vh;
 		}
 		iframe {
 			width: 100%;
