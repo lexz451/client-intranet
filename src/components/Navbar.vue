@@ -137,6 +137,12 @@ export default {
 		font-weight: 700;
 		color: #fafafa;
 	}
+	.dropdown-item {
+		cursor: pointer;
+		&:hover {
+			background-color: transparent;
+		}
+	}
 	.nav-link {
 		font-weight: 700;
 		color: #fafafa;
