@@ -3,9 +3,9 @@
         <div id="tree-item-content" class="d-flex align-items-center p-2 m-2">
 			<i class="mr-2 ml-2" :class="icon"></i>
             <span class="title flex-grow-1">{{ item.title }}</span>
-            <div class="d-flex" v-if="item.file">
+            <div class="d-flex align-items-center" v-if="item.file">
                 <b-button icon="fa fa-file" size="sm" type="" @click.native="showModal(item)">View</b-button>
-                <router-link :to="item.file" download>Download</router-link>
+                <a :href="`/${item.file}`" download><i class="fa fa-download"></i> Download</a>
             </div>
         </div>
         <ul v-if="isParent" v-show="isOpen" class="tree">
