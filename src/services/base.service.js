@@ -1,10 +1,8 @@
 import Axios from 'axios';
 
-const API_URL = 'http://localhost:8000/api';
-
 class BaseService {
 	constructor() {
-		Axios.defaults.baseURL = document.location.origin;
+		Axios.defaults.baseURL = `${document.location.origin}/api`;
 		Axios.interceptors.request.use((config => {
 			const user = JSON.parse(localStorage.getItem('user'));
 			if (user && user.token) {
