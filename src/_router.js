@@ -9,17 +9,37 @@ import SignInForm from '~/components/SignInForm.vue';
 import SignUpForm from '~/components/SignUpForm.vue';
 import ResetPassword from '~/components/ResetPassword.vue';
 
+function getUser() {
+	return JSON.parse(localStorage.getItem('user'));
+}
+
 const router = new Router({
 	linkExactActiveClass: 'active',
 	routes: [
 		{
 			name: 'home',
 			path: '/',
-			component: Home
+			component: Home,
+			beforeEnter(to, from, next) {
+				const user = getUser();
+				if (user && user.token) {
+					next();
+				} else {
+					next({name: 'sign-in'});
+				}
+			}
 		},
 		{
 			path: '/access',
 			component: Access,
+			beforeEnter(to, from, next) {
+				const user = getUser();
+				if (user && user.token) {
+					next({name: 'home'});
+				} else {
+					next();
+				}
+			},
 			children: [
 				{
 					name: 'sign-in',
