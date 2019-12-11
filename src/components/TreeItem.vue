@@ -5,7 +5,7 @@
             <span class="title flex-grow-1">{{ item.title }}</span>
             <div class="d-flex" v-if="item.file">
                 <b-button icon="fa fa-file" size="sm" type="" @click.native="showModal(item)">View</b-button>
-                <b-button class="ml-2" icon="fa fa-download" type="" size="sm" @click.native="showModal">Download</b-button>
+                <router-link :to="item.file" download>Download</router-link>
             </div>
         </div>
         <ul v-if="isParent" v-show="isOpen" class="tree">
