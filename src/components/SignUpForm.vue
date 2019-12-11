@@ -43,7 +43,8 @@ export default {
 				password: '',
 				passwordRepeat: '',
 				_token: undefined
-			}
+			},
+			succeed: false
 		}
 	},
 	methods: {
@@ -52,16 +53,14 @@ export default {
 			return true;
 		},
 		onSubmit() {
-			const valid = this.validate();
-			if (valid) {
-				this.signUp()
+			this.signUp(this.credentials)
 					.then(() => {
-
+						this.succeed = true;
 					})
 					.catch(e => {
-						
+						console.error(e);
 					});
-			}
+			
 		}
 	},
 	mounted() {
