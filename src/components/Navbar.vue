@@ -102,7 +102,7 @@ export default {
 			return this.$i18n.locale;
 		},
 		isUserAdmin() {
-			return this.user && this.user.role === 0;
+			return true;
 		}
 	},
 	methods: {
