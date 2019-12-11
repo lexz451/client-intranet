@@ -63,7 +63,7 @@
 							<a href="#" class="nav-link text-nowrap">{{$t('navbar.products')}}</a>							
 						</div>
 						<div class="nav-item">
-							<a href="#" class="nav-link text-nowrap">{{$t('navbar.info')}}</a>
+							<a href="#info" class="nav-link text-nowrap">{{$t('navbar.info')}}</a>
 						</div>
 						<div class="nav-item">
 							<a href="#" class="nav-link text-nowrap">{{$t('navbar.contact')}}</a>
