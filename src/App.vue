@@ -35,4 +35,17 @@ export default {
 		}
 	}
 }
+
+.form-group {
+	width: 100%;
+	.input-group-text {
+		min-width:48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.form-control {
+		width: 100%;
+	}
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="info-item">
+	<div class="info-item shadow shadow-1">
 		<div class="row">
 			<div class="col">
 				<!--<img v-lazy="item.image" class="img" alt="">-->
