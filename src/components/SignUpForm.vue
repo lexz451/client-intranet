@@ -1,6 +1,7 @@
 <template>
   <div v-if="succeed">
-	  <h3>Hurra!</h3>
+	  <h3>Your account was created successfully.</h3>
+	  <p>An confirmation email have beed sended to your inbox</p>
   </div>
   <card shadow v-else>
     <template #header>
