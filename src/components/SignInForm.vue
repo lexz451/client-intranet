@@ -1,8 +1,9 @@
 <template>
 	<card class="" shadow>
-		<template #header>
+		<div slot="header" class="card-header-content">
+			<!--<img class="img" src="~/assets/images/logo.png" alt="">-->
 			<h3 class="title">Sign in to your account</h3>
-		</template>
+		</div>
 		<div class="error">
 			<small class="text-danger">{{ error ? error : '&nbsp;' }}</small>
 		</div>
@@ -66,5 +67,11 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+.form-control {
+	&:focus {
+		box-shadow: none;
+		border: 1px solid #ced4da;
+	}
 }
 </style>

@@ -7,9 +7,9 @@
 		<div class="container">
 			<div class="content">
 				<h3 class="title">About <br> <em>Cuba</em></h3>
+				<PulseLoader :loading="loading" color="#212121"></PulseLoader>
 				<fade-transition mode="out-in" origin="center" :duration="150">
-					<div v-if="loading"></div>
-					<info-grid :items="info" v-else></info-grid>
+					<info-grid :items="info"></info-grid>
 				</fade-transition>
 			</div>
 		</div>
@@ -19,13 +19,15 @@
 <script>
 import { FadeTransition } from 'vue2-transitions';
 import InfoGrid from '~/components/InfoGrid.vue';
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue';
 
 export default {
 	name: 'info',
 	props: ['info', 'loading'],
 	components: {
 		InfoGrid,
-		FadeTransition
+		FadeTransition,
+		PulseLoader
 	}
 }
 </script>

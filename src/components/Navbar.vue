@@ -7,7 +7,7 @@
 						<a href="#" class="nav-link nav-link-icon" v-if="user">
 							<i class="fa fa-user"></i>
 							<span @click="showModal" class="nav-link-inner--text">{{user.username}}</span>
-							<a class="badge badge-primary" href="/admin">Admin</a>
+							<a v-if="isUserAdmin" class="badge badge-primary" href="/sensesofcuba/admin">Admin</a>
 							<modal :show.sync="modalOpen" modalClasses="modal-md">
 								<h6 slot="header" class="modal-title" id="modal-title-default">{{ user.username }}</h6>
 								<div class="user-data container" slot="default">
@@ -100,6 +100,9 @@ export default {
 	computed: {
 		currentLocale() {
 			return this.$i18n.locale;
+		},
+		isUserAdmin() {
+			return this.user && this.user.role === 0;
 		}
 	},
 	methods: {
