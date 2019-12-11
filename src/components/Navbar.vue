@@ -112,6 +112,7 @@ export default {
 		},
 		toggleLocale(locale) {
 			setLocale(locale);
+			this.$router.go();
 		}
 	}
 }
