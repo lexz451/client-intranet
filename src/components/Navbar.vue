@@ -7,7 +7,7 @@
 						<a href="#" class="nav-link nav-link-icon" v-if="user">
 							<i class="fa fa-user"></i>
 							<span @click="showModal" class="nav-link-inner--text">{{user.username}}</span>
-							<span class="badge badge-primary">Admin</span>
+							<a class="badge badge-primary" href="/admin">Admin</a>
 							<modal :show.sync="modalOpen" modalClasses="modal-md">
 								<h6 slot="header" class="modal-title" id="modal-title-default">{{ user.username }}</h6>
 								<div class="user-data container" slot="default">
