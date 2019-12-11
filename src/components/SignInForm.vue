@@ -6,8 +6,8 @@
 		<div class="error">
 			<small class="text-danger">{{ error ? error : '&nbsp;' }}</small>
 		</div>
-		<form-input v-model="email" placeholder="Email" addonLeftIcon="fa fa-envelope" :disabled="loading"></form-input>
-		<form-input v-model="password" placeholder="Password" addonLeftIcon="fa fa-lock" :disabled="loading"></form-input>
+		<form-input type="email" v-model="email" placeholder="Email" addonLeftIcon="fa fa-envelope" :disabled="loading"></form-input>
+		<form-input type="password" v-model="password" placeholder="Password" addonLeftIcon="fa fa-lock" :disabled="loading"></form-input>
 		<router-link class="mb-2" :to="{name: 'reset'}">Forgot your password?</router-link>
 		<b-button @click.native="onSubmit" class="mt-1" type="primary" :disabled="loading">Sign In</b-button>
 		<template #footer>

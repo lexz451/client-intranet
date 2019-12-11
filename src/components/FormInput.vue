@@ -26,6 +26,7 @@
         </div>
         <slot v-bind="slotData">
             <input
+                    :type="type"
                     :value="value"
                     v-on="listeners"
                     v-bind="$attrs"
@@ -93,6 +94,10 @@ export default {
     addonLeftIcon: {
       type: String,
       description: "Addont left icon"
+    },
+    type: {
+      type: String,
+      default: "text"
     }
   },
   data() {

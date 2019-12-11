@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 class BaseService {
 	constructor() {
-		Axios.defaults.baseURL = `${document.location.origin}/api`;
+		Axios.defaults.baseURL = `${document.location.origin}/sensesofcuba/api`;
 		Axios.interceptors.request.use((config => {
 			const user = JSON.parse(localStorage.getItem('user'));
 			if (user && user.token) {
