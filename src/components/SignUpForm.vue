@@ -41,9 +41,9 @@ export default {
 				country: '',
 				email: '',
 				password: '',
-				passwordRepeat: '',
 				_token: undefined
 			},
+			passwordRepeat: '',
 			succeed: false
 		}
 	},
