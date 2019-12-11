@@ -21,12 +21,13 @@ const router = new Router({
 			path: '/',
 			component: Home,
 			beforeEnter(to, from, next) {
-				const user = getUser();
+				/*const user = getUser();
 				if (user && user.token) {
 					next();
 				} else {
 					next({name: 'sign-in'});
-				}
+				}*/
+				next();
 			}
 		},
 		{

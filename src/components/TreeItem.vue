@@ -4,8 +4,8 @@
 			<i class="mr-2 ml-2" :class="icon"></i>
             <span class="title flex-grow-1">{{ item.title }}</span>
             <div class="d-flex align-items-center" v-if="item.file">
-                <b-button icon="fa fa-file" size="sm" type="" @click.native="showModal(item)">View</b-button>
-                <a class="btn btn-primary btn-sm" role="button" :href="item.file" download><i class="fa fa-download"></i> Download</a>
+                <button class="btn btn-secondary btn-sm mr-2" @click="showModal(item)"><i class="fa fa-file"></i> Open</button>
+                <a class="btn btn-primary btn-sm" role="button" :href="`/sensesofcuba/${item.file}`" download><i class="fa fa-download"></i> Download</a>
             </div>
         </div>
         <ul v-if="isParent" v-show="isOpen" class="tree">
@@ -46,7 +46,7 @@ export default {
             }
         },
         showModal(item) {
-            this.$modal.show(item.title, item.file);
+            this.$modal.show(item.title, `/sensesofcuba/${item.file}`);
         }
     },
     updated() {

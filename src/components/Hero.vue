@@ -2,7 +2,7 @@
 	<section id="hero" v-lazy:background-image="bgHero" class="jumbotron jumbotron-fluid">
 		<svg class="divider" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
 			<path class="bg" fill="transparent" d="M 0 0 L 0 100 L 100 100 L 100 0 Z"></path>
-			<path class="arc" fill="#f9ce1c" d="M 0 100 C 40 0 60 0 100 100 Z"></path>
+			<path class="arc" fill="#fdc416" d="M 0 100 C 40 0 60 0 100 100 Z"></path>
 		</svg>
 		<div class="container">
 			<h1>Cuba is... <br>Our Passion</h1>

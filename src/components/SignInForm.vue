@@ -1,8 +1,8 @@
 <template>
 	<card class="" shadow>
 		<div slot="header" class="card-header-content">
-			<!--<img class="img" src="~/assets/images/logo.png" alt="">-->
-			<h3 class="title">Sign in to your account</h3>
+			<img class="img" src="~/assets/images/logo.png" alt="">
+			<h3 class="title">Sign In</h3>
 		</div>
 		<div class="error">
 			<small class="text-danger">{{ error ? error : '&nbsp;' }}</small>
@@ -63,6 +63,16 @@ export default {
 </script>
 
 <style lang="scss">
+.img {
+	width: 150px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+.card-header-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 .card-body, .card-footer {
 	display: flex;
 	flex-direction: column;

@@ -6,14 +6,12 @@
 				<img src="~/assets/images/hero.jpg" class="img" alt="">
 			</div>
 			<div class="col">
-				<h6 class="title">{{ item.title }} Internet en Cuba</h6>
-				<small>Last update: </small>
-			</div>
-		</div>
-		<div class="row actions">
-			<div class="col">
-				<button class="btn btn-secondary btn-sm" size="sm"><i class="fa fa-file"></i> View</button>
-				<a class="btn btn-primary btn-sm" role="button" href="#" size="sm"><i class="fa fa-file"></i> Download</a>
+				<div class="row">
+					<span class="title">{{ item.title }}</span>
+					<br>
+					<small>Last update: </small>
+				</div>
+				<div class="row"></div>
 			</div>
 		</div>
 	</div>
@@ -35,7 +33,6 @@ export default {
 .info-item {
 	margin: 4px 8px;
 	width: 300px;
-	height: 150px;
 	background: #fff;
 	padding: 12px 20px;
 	border-radius: 5px;
@@ -43,15 +40,10 @@ export default {
 	position: relative;
 	img {
 		width: 100%;
-		height: 100%;
+		height: 150px;
 		object-fit: cover;
 		object-position: center;
 	}
-	.actions {
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		
-	}
+	
 }
 </style>

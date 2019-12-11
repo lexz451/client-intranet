@@ -6,7 +6,7 @@
         :key="index"
         @click="toggle(index)">
             <div class="item-content" :class="{ 'selected': currentItem === index }"
-				v-lazy:background-image="item.image">
+				v-lazy:background-image="`/sensesofcuba/${item.image}`">
                 <span>{{ item.title }}</span>
             </div>
 			<div class="item-panel" @click.stop v-show="currentItem === index" ref="panels">
@@ -85,7 +85,7 @@ export default {
     flex: 1 0 auto;
     height: 160px;
     width: 260px;
-    background: orange;
+    background: f9ce1c;
     margin: 2px;
     border-radius: 3px;
 }

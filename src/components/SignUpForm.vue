@@ -3,10 +3,11 @@
 	  <h3>Your account was created successfully.</h3>
 	  <p>An confirmation email have beed sended to your inbox</p>
   </div>
-  <card shadow v-else>
-    <template #header>
-      <h3 class="title">Create a new account</h3>
-    </template>
+  <card id="card" shadow v-else>
+    <div slot="header" class="card-header-content">
+			<img class="img" src="~/assets/images/logo.png" alt="">
+			<h3 class="title">Sign Up</h3>
+		</div>
     <form-input v-model="credentials.name" placeholder="Full Name" addonLeftIcon="fa fa-user"></form-input>
     <form-input
       v-model="credentials.enterprise"
@@ -82,4 +83,8 @@ export default {
 </script>
 
 <style>
+#card {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
 </style>
